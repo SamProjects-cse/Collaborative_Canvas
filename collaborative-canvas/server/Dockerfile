@@ -3,6 +3,6 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN ./node_modules/.bin/tsc
+RUN npm exec tsc
 EXPOSE 8080
 CMD ["node", "dist/index.js"]
